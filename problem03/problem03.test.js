@@ -6,8 +6,8 @@ describe("problem03: sumExcludingMultiplesOfThreeAndFive", () => {
     expect(sumExcludingMultiplesOfThreeAndFive(5)).toBe(7);
   });
 
-  test("1부터 10까지 => 37 (3, 5, 6, 9, 10 제외)", () => {
-    expect(sumExcludingMultiplesOfThreeAndFive(10)).toBe(37);
+  test("1부터 10까지 => 22 (3, 5, 6, 9, 10 제외)", () => {
+    expect(sumExcludingMultiplesOfThreeAndFive(10)).toBe(22);
   });
 
   test("0까지 => 0", () => {
