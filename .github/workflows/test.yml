@@ -1,0 +1,36 @@
+name: Node.js CI
+
+on:
+  # "on" 키워드는 이 워크플로우를 언제 어떻게 실행할지 정의
+  push:
+    branches: [ "main" ]
+    # main 브랜치에 새 커밋이 푸시(push)될 때 자동으로 워크플로우 실행
+  pull_request:
+    branches: [ "main" ]
+    # main 브랜치 대상의 풀 리퀘스트(PR)가 생성, 업데이트, 병합 준비 등 상태가 변경될 때 실행
+  workflow_dispatch:
+    # 수동 실행(Dispatch)을 허용
+    # GitHub Actions 페이지에서 "Run workflow" 버튼을 눌러 직접 트리거 가능
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        # 현재 리포지토리의 코드를 가져옴 (소스 접근 및 빌드/테스트 위해 필요)
+
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+        # Node.js 22 버전 환경에서 스크립트 실행
+
+      - name: Install dependencies
+        run: npm install
+        # package.json에 명시된 의존성(라이브러리 등)을 설치
+
+      - name: Run tests
+        run: npm test
+        # Jest 등으로 작성된 테스트 스크립트를 실행
