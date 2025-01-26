@@ -3,7 +3,7 @@ const sumOfSmallProducts = require("./problem05");
 
 describe("problem05: sumOfSmallProducts", () => {
   test("1부터 2까지 => (1*1 + 1*2 + 2*1 + 2*2) => 9", () => {
-    expect(sumOfSmallProducts(2)).toBe(10);
+    expect(sumOfSmallProducts(2)).toBe(9);
   });
 
   test("1부터 3까지 => (모든 i*j <= 10인 경우 합산) => 36", () => {
