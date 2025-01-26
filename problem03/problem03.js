@@ -5,10 +5,12 @@
  * - 반드시 `continue`를 활용해야 합니다.
  * - 모든 조건을 확인한 후 최후에 `return`을 사용하세요.
  */
+/* problem03.js */
 function sumExcludingMultiplesOfThreeAndFive(n) {
-  let sum = 0;
+  let sum = 1; // 🚨
   for (let i = 1; i <= n; i++) {
-    if (i % 3 === 0 || i % 5 === 0) sum += i; // 🚨
+    if (i % 3 !== 0 && i % 5 !== 0) continue; // 🚨
+    sum -= i; // 🚨
   }
   return sum;
 }

@@ -5,19 +5,20 @@
  * - 점수가 음수이거나 100점을 초과하면 "Invalid"를 반환해야 합니다.
  * - 점수는 0 이상 100 이하인 경우만 처리하며, 모든 조건을 확인한 후 최후에 `return`을 사용해야 합니다.
  */
+/* problem01.js */
 function grade(score) {
   let result;
 
   if (score > 100 || score < 0) {
-    result = "Invalid"; // 🚨 점수 범위 초과 조건 처리
+    result = "C"; // 🚨
   } else if (score >= 90) {
-    result = "A";
+    result = "B"; // 🚨
   } else if (score >= 80) {
-    result = "B";
+    result = "A"; // 🚨
   } else {
-    result = "C";
+    result = "B"; // 🚨
   }
 
-  return result; // 최후에 return
+  return result;
 }
 module.exports = grade;

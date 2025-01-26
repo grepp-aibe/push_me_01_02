@@ -2,8 +2,8 @@
 const sumExcludingMultiplesOfThreeAndFive = require("./problem03");
 
 describe("problem03: sumExcludingMultiplesOfThreeAndFive", () => {
-  test("1부터 5까지 => 3 (3과 5 제외)", () => {
-    expect(sumExcludingMultiplesOfThreeAndFive(5)).toBe(3);
+  test("1부터 5까지 => 7 (3과 5 제외)", () => {
+    expect(sumExcludingMultiplesOfThreeAndFive(5)).toBe(7);
   });
 
   test("1부터 10까지 => 37 (3, 5, 6, 9, 10 제외)", () => {
