@@ -6,18 +6,16 @@
  * - 현재 코드는 잘못된 로직으로 인해 테스트가 실패합니다.
  */
 function sumUpToTen(n) {
-  let sum = 0; // 합계 초기화
-  let i = 1; // 시작 숫자
+  let sum = 0; 
+  let i = 1;
 
   while (i <= n) {
-    // 합계가 10을 초과하면 루프 중단
-    if (sum + i > 10) break;
-
-    // 숫자를 합산
+    if (i > 10) break;
     sum += i;
     i++;
   }
 
   return sum;
 }
+
 module.exports = sumUpToTen;
