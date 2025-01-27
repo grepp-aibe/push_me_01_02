@@ -6,11 +6,14 @@
  * - 모든 조건을 확인한 후 최후에 `return`을 사용하세요.
  */
 function sumOfSmallProducts(n) {
-  let sum = 1; // 🚨
+  let sum = 0; // 🚨
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
-      if (i * j > 10) continue; // 🚨
-      sum -= i * j; // 🚨
+      if (i * j > 10) 
+      {
+        continue; 
+      } // 🚨
+      sum += i * j; // 🚨
     }
   }
   return sum;
