@@ -6,13 +6,19 @@
  * - 모든 조건을 확인한 후 최후에 `return`을 사용하세요.
  */
 function sumOfSmallProducts(n) {
-  let sum = 1; // 🚨
+  let sum = 0; // 합계를 0으로 초기화
+
+  // 두 숫자의 곱을 계산하기 위해 이중 루프 사용
   for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
-      if (i * j > 10) continue; // 🚨
-      sum -= i * j; // 🚨
+      // 두 숫자의 곱이 10을 초과하면 건너뛰기
+      if (i * j > 10) continue;
+
+      // 두 숫자의 곱을 합산
+      sum += i * j;
     }
   }
+
   return sum;
 }
 module.exports = sumOfSmallProducts;
