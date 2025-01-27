@@ -9,16 +9,17 @@
 function grade(score) {
   let result;
 
-  if (score > 100 || score < 0) {
-    result = "C"; // 🚨
-  } else if (score >= 90) {
-    result = "B"; // 🚨
-  } else if (score >= 80) {
-    result = "A"; // 🚨
-  } else {
-    result = "B"; // 🚨
+  if (score < 0 || score > 100) { // 점수가 음수이거나 100을 초과하면 Invalid
+    result = "Invalid";
+  } else if (score >= 90) { // 점수가 90 이상인 경우 A
+    result = "A";
+  } else if (score >= 80) { // 점수가 80 이상 90 미만인 경우 B
+    result = "B";
+  } else if (score >= 0) { // 점수가 0 이상 80 미만인 경우 C
+    result = "C";
   }
 
   return result;
 }
+
 module.exports = grade;
