@@ -8,15 +8,14 @@
 /* problem01.js */
 function grade(score) {
   let result;
-
   if (score > 100 || score < 0) {
-    result = "Invalid"; // 🚨
+    result = "Invalid";
   } else if (score >= 90) {
-    result = "A"; // 🚨
+    result = "A";
   } else if (score >= 80) {
-    result = "B"; // 🚨
+    result = "B";
   } else {
-    result = "C"; // 🚨
+    result = "C";
   }
 
   return result;
