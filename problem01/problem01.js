@@ -10,13 +10,13 @@ function grade(score) {
   let result;
 
   if (score > 100 || score < 0) {
-    result = "C"; // 🚨
+    result = "Invalid"; // 🚨
   } else if (score >= 90) {
-    result = "B"; // 🚨
-  } else if (score >= 80) {
     result = "A"; // 🚨
-  } else {
+  } else if (score >= 80) {
     result = "B"; // 🚨
+  } else {
+    result = "C"; // 🚨
   }
 
   return result;
