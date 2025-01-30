@@ -8,7 +8,7 @@
 /* problem01.js */
 function grade(score) {
   let result;
-
+  /*
   if (score > 100 || score < 0) {
     result = "C"; // 🚨
   } else if (score >= 90) {
@@ -17,6 +17,17 @@ function grade(score) {
     result = "A"; // 🚨
   } else {
     result = "B"; // 🚨
+  }
+  */
+
+  if (score > 100 || score < 0) {
+    result = "Invalid"; // 🚨
+  } else if (score >= 90) {
+    result = "A"; // 🚨
+  } else if (score >= 85) {
+    result = "B"; // 🚨
+  } else if (score >= 75) {
+    result = "C"; // 🚨
   }
 
   return result;
