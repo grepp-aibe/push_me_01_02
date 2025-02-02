@@ -6,13 +6,16 @@
  * - 현재 코드는 잘못된 로직으로 인해 테스트가 실패합니다.
  */
 function sumUpToTen(n) {
-  let sum = 1; // 🚨
+  if (n <= 0) return 0;
+  let sum = 0; // 🚨
   let i = 1;
 
-  while (i <= n) {
-    if (i > 10) break; // 🚨
-    sum -= i; // 🚨
+  while (1) {
+    sum += i;
     i++;
+    if (i > 10 || i > n) {
+      break;
+    }
   }
 
   return sum;
